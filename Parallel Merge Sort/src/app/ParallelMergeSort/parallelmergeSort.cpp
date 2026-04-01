@@ -10,8 +10,8 @@ ParallelMergeSort::~ParallelMergeSort(){};
 
 void ParallelMergeSort::recursiveSort(int left,int right){
 
-        const int THRESHOLD = 5000;
-
+        const int THRESHOLD = 50000;
+        
           if(left>=right){
             return;
         }

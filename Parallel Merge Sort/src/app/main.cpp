@@ -1,17 +1,17 @@
 #include <iostream>
-#include "mergeSort.hpp"
-#include "parallelmergeSort.hpp"
+#include "MergeSort/mergeSort.hpp"
+#include "ParallelMergeSort/parallelmergeSort.hpp"
 #include<chrono>
 int main(int argc, char *argv[]){
 
-    const int SIZE=1000;
+    const int SIZE=100000000;
     std::vector<int> nums(SIZE);
      std::vector<int> nums1(SIZE);
     for (int i = 0; i < SIZE; ++i)
     {
-        nums[i]=rand()%1000;
-        nums1[i]=rand()%1000;
-
+        nums[i]=rand()% 1000000;
+        nums1[i]=nums[i];
+ 
     }
     MergeSort* mergesort = new MergeSort(&nums);
     auto start = std::chrono::high_resolution_clock::now();
